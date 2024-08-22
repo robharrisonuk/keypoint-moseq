@@ -1357,6 +1357,11 @@ def get_limits(
     ymin -= height * bottom
     ymax += height * top
 
+    xmin -= 1.0             # Stop crashing visualisation when data is has a small scale.
+    ymin -= 1.0
+    xmax += 1.0
+    ymax += 1.0
+
     lims = np.array([[xmin, ymin], [xmax, ymax]])
 
     if blocksize is not None:
