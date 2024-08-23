@@ -14,6 +14,7 @@ from .util import *
 from .fitting import *
 from .analysis import *
 from .calibration import noise_calibration
+from .analysis_customized import *
 
 from jax_moseq.models.keypoint_slds import fit_pca
 from jax_moseq.utils import get_frequencies, get_durations
